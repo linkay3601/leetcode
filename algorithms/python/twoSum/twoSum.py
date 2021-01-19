@@ -1,3 +1,12 @@
+'''
+思路：
+             j
+        /^^^^^^^^^^\
+    [1, 2, 3, 4, 5, 6]
+    \____________/
+          i
+'''
+
 def twoSum3(nums: list[int], target: int) -> list[int]:
     numsN = len(nums)
     for i in range(numsN - 1):
