@@ -46,6 +46,10 @@ The following are the options and descriptions.
 | Option | Describe |
 | :----: | :------: |
 | `-n` | 抑制默认输出 |
+| `-f` | 执行 Sed 脚本 |
+| `-e` | 执行多个 Sed 命令 |
+| `-l` | 与 `l`命令一起使用，指定行长度 |
+| `-c` | 与 `-i` 一起使用，保留文件所有权 |
 | `-i<orig>` | 修改源文件并备份 |
 | `--in-place=<orig>` | 相当于 `-i<orig>` |
 
@@ -69,11 +73,20 @@ The following are the flags and descriptions.
 
 | Flag | Describe |
 | :--: | :------: |
-| `p` | 打印操作行 |
+| `p` | 打印 pattern space |
 | `1,2,3..` | 第 n 个匹配项 |
 | `w` | 写入 |
 | `i` | 忽略大小写 |
-| `e` | 执行操作行 |
+| `e` | 执行 pattern space |
+| `a` | 在之后添加 |
+| `i` | 在之前插入 |
+| `c` | 替换行 |
+| `l` | 打印隐藏字符 |
+| `=` | 打印行数 |
+| `y` | 大小写转换 |
+| `q` | 退出 Sed |
+| `r` | 读取文件 |
+| `n` | 打印 pattern space、改变执行流 |
 
 ## Scripts
 

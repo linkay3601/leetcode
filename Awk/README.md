@@ -45,6 +45,7 @@ The following are the built-in variables and their descriptions.
 | NR | 记录数量 |
 | FILENAME | 当前文件名称 |
 | FNR | 文件记录数量 |
+| SUBSEP | 自定义 Subscript Separator |
 
 ## Variables and Operators
 
@@ -139,3 +140,44 @@ Additional syntax about loop.
 - continue
 - exit
 
+## Arrays
+
+Syntax.
+
+``` bash
+arrayname[string]=value
+```
+
+Browse the Array using For Loop.
+
+``` bash
+for (var in arrayname)
+actions
+```
+
+Delete Array Element.
+
+``` bash
+delete arrayname[index];
+
+for (var in array)
+   delete array[var]
+
+delete array
+```
+
+Multi Dimensional Array.
+
+The `[1,2]` and `["1,2"]` are different.
+
+Sort Array Values using asort.
+
+``` bash
+asort(item[, newarray]);
+```
+
+Sort Array Indexes using asorti.
+
+``` bash
+asorti(state[, newarray]);
+```
