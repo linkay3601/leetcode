@@ -69,10 +69,10 @@ The following are the special characters of replacement-string and their descrip
 | `&` | 匹配项 |
 | `\n` | 第 n 个组的匹配项 |
 
-The following are the flags and descriptions.
+The following are the commands and descriptions.
 
-| Flag | Describe |
-| :--: | :------: |
+| Command | Describe |
+| :-----: | :------: |
 | `p` | 打印 pattern space |
 | `1,2,3..` | 第 n 个匹配项 |
 | `w` | 写入 |
@@ -87,6 +87,16 @@ The following are the flags and descriptions.
 | `q` | 退出 Sed |
 | `r` | 读取文件 |
 | `n` | 打印 pattern space、改变执行流 |
+
+The following are the commands about hold space and their descriptions.
+
+| Command | Describe |
+| :-----: | :------: |
+| `x` | 交换 pattern space 和 hold space |
+| `h` | 拷贝 pattern space 到 hold space |
+| `H` | 添加 pattern space 到 hold space |
+| `g` | 拷贝 hold space 到 pattern space |
+| `G` | 拷贝 hold space 到 pattern space |
 
 ## Scripts
 
