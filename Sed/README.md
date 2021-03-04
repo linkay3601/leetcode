@@ -41,7 +41,7 @@ Substitute Command Syntax.
 
 ## Special Characters
 
-The following are the options and descriptions.
+Options and descriptions.
 
 | Option | Describe |
 | :----: | :------: |
@@ -53,7 +53,7 @@ The following are the options and descriptions.
 | `-i<orig>` | 修改源文件并备份 |
 | `--in-place=<orig>` | 相当于 `-i<orig>` |
 
-The following are the address and patterns and their descriptions.
+Address and patterns and their descriptions.
 
 | Symbol | Describe |
 | :----: | :------: |
@@ -62,14 +62,14 @@ The following are the address and patterns and their descriptions.
 | `$` | 最后一行 |
 | `n~m` | n 行开始，每次 + m |
 
-The following are the special characters of replacement-string and their descriptions.
+Special characters of replacement-string and their descriptions.
 
 | Symbol | Describe |
 | :----: | :------: |
 | `&` | 匹配项 |
 | `\n` | 第 n 个组的匹配项 |
 
-The following are the commands and descriptions.
+Commands and descriptions.
 
 | Command | Describe |
 | :-----: | :------: |
@@ -88,7 +88,7 @@ The following are the commands and descriptions.
 | `r` | 读取文件 |
 | `n` | 打印 pattern space、改变执行流 |
 
-The following are the commands about hold space and their descriptions.
+Commands about hold space and their descriptions.
 
 | Command | Describe |
 | :-----: | :------: |
@@ -98,7 +98,7 @@ The following are the commands about hold space and their descriptions.
 | `g` | 拷贝 hold space 到 pattern space |
 | `G` | 拷贝 hold space 到 pattern space |
 
-The following are the Multi-Line commands and loops.
+Multi-Line commands and loops.
 
 | Command | Describe |
 | :-----: | :------: |
