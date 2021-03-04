@@ -98,6 +98,17 @@ The following are the commands about hold space and their descriptions.
 | `g` | 拷贝 hold space 到 pattern space |
 | `G` | 拷贝 hold space 到 pattern space |
 
+The following are the Multi-Line commands and loops.
+
+| Command | Describe |
+| :-----: | :------: |
+| `N` | 添加 next line 到 pattern space |
+| `P` | 打印 pattern space 直到换行（即遇到 \n）|
+| `D` | 删除 pattern space 直到换行（即遇到 \n）、对剩余部分重新执行 sed 命令 |
+| `:lable` | 定义 lable |
+| `b lable` | 跳转到 lable |
+| `t lable` | s 命令成功、跳转到 lable |
+
 ## Scripts
 
 Shebang Line.
