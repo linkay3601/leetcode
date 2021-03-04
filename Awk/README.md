@@ -34,7 +34,7 @@ END { awk-commands }
 
 ## Built-in Variables
 
-The following are the built-in variables and their descriptions.
+Built-in variables and their descriptions.
 
 | Variable | Describe |
 | :------: | :------: |
@@ -51,7 +51,7 @@ The following are the built-in variables and their descriptions.
 
 There are no data types in Awk. Whether an awk variable is a number or a string depends on the context in which the variable is used in.
 
-There are Operators for Awk.
+Operators for Awk.
 
 | Operator  | Describe |
 | :------:  | :------: |
@@ -181,3 +181,24 @@ Sort Array Indexes using asorti.
 ``` bash
 asorti(state[, newarray]);
 ```
+
+## Additional Awk Commands
+
+### Pretty Printing Using printf
+
+__Syntax__.
+
+``` bash
+printf "print format", variable1, variable2, etc.
+```
+
+__Special Characters in the printf Format__
+
+| Special Character | Description |
+| :---------------: | :---------: |
+| `\n` | 换行 |
+| `\t` | Tab |
+| `\v` | 竖直 Tab、可递增 |
+| `\b` | 回退、删除之前的字符 |
+| `\r` | 回车、覆盖之前的打印 |
+| `\f` | 效果与 `\v` 类似（猜的）|
