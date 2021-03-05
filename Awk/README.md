@@ -231,4 +231,26 @@ Special Characters in the printf Format.
 | `index(string, char)` | 获取 char 在 string 中的索引位置 |
 | `length(string)` | 获取 string 的长度 |
 | `split(input-string, output-array, separator)` | 用 separator 切割 input-string 到 output-array |
-| `substr(input-string, location, length)` | 从 input-string 的 location 位置提取 length 长度的字符 |
+| `substr(input-string, location, length)` | 从 input-string 的 location 位置提取 length 长度的字符串 |
+
+### GAWK/NAWK String Functions
+
+These string functions are available only in GAWK and NAWK flavors.
+
+| Function | Description |
+| :------: | :---------: |
+| `sub(original-string, replacement-string, string-variable)` | 替换 string-variable 中的第一个 original-string 为 replacement-string |
+| `gsub(original-string, replacement-string, string-variable)` | 替换 string-variable 中的所有 original-string 为 replacement-string |
+| `match(input-string, search-string)` | 在 input-string 中搜索 sear-string |
+
+Two special variables about `match()`.
+
+- `RSTART`: search-string 的起始位置
+- `RLENGTH`: search-string 的长度
+
+### GAWK String Functions
+
+| Function | Description |
+| :------: | :---------: |
+| `tolower(string)` | 转化 string 为小写 |
+| `toupper(string)` | 转换 string 为大写 |
