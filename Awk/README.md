@@ -49,9 +49,11 @@ Built-in variables and their descriptions.
 
 ## Variables and Operators
 
-There are no data types in Awk. Whether an awk variable is a number or a string depends on the context in which the variable is used in.
+There are no data types in Awk.
 
-Operators for Awk.
+Whether an awk variable is a number or a string depends on the context in which the variable is used in.
+
+### Operators for Awk
 
 | Operator  | Describe |
 | :------:  | :------: |
@@ -186,13 +188,13 @@ asorti(state[, newarray]);
 
 ### Pretty Printing Using printf
 
-__Syntax__.
+Syntax.
 
 ``` bash
 printf "print format", variable1, variable2, etc.
 ```
 
-__Special Characters in the printf Format__
+Special Characters in the printf Format.
 
 | Special Character | Description |
 | :---------------: | :---------: |
@@ -202,3 +204,31 @@ __Special Characters in the printf Format__
 | `\b` | 回退、删除之前的字符 |
 | `\r` | 回车、覆盖之前的打印 |
 | `\f` | 效果与 `\v` 类似（猜的）|
+
+### Built-in Numeric Functions
+
+| Function | Description |
+| :------: | :---------: |
+| `int(n)` | 整数 |
+| `log(n)` | 自然对数（即：以 10 为底 n 的对数 |
+| `sqrt(n)` | 平方根（注：参数为负数会报错，显示 nan）|
+| `exp(n)` | 自然数 e 的 n 次幂 |
+| `sin(n)` | n 的正弦 |
+| `cos(n)` | n 的余弦 |
+| `atan2(m, n)` | m, n 的正切 |
+
+### Random Number Generator
+
+| Function | Description |
+| :------: | :---------: |
+| `rand()` | 随机生成 0~1 之间的数字 |
+| `srand(n)` | 初始化 Generator（即：使 rand() 基于 n 开始随机）|
+
+### Generic String Functions
+
+| Function | Description |
+| :------: | :---------: |
+| `index(string, char)` | 获取 char 在 string 中的索引位置 |
+| `length(string)` | 获取 string 的长度 |
+| `split(input-string, output-array, separator)` | 用 separator 切割 input-string 到 output-array |
+| `substr(input-string, location, length)` | 从 input-string 的 location 位置提取 length 长度的字符 |
