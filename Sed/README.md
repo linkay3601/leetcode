@@ -41,10 +41,10 @@ Substitute Command Syntax.
 
 ## Special Characters
 
-Options and descriptions.
+### Options and descriptions
 
 | Option | Description |
-| :----: | :------: |
+| :----: | :---------: |
 | `-n` | 抑制默认输出 |
 | `-f` | 执行 Sed 脚本 |
 | `-e` | 执行多个 Sed 命令 |
@@ -53,26 +53,26 @@ Options and descriptions.
 | `-i<orig>` | 修改源文件并备份 |
 | `--in-place=<orig>` | 相当于 `-i<orig>` |
 
-Address and patterns and their descriptions.
+### Characters about address and their descriptions
 
-| Symbol | Description |
-| :----: | :------: |
+| Character | Description |
+| :-------: | :---------: |
 | `n` | 第 n 行 |
 | `n,m` | n ~ m 行 |
 | `$` | 最后一行 |
 | `n~m` | n 行开始，每次 + m |
 
-Special characters of replacement-string and their descriptions.
+### Characters about replacement-string and their descriptions
 
-| Symbol | Description |
-| :----: | :------: |
+| Character | Description |
+| :-------: | :---------: |
 | `&` | 匹配项 |
 | `\n` | 第 n 个组的匹配项 |
 
-Commands and descriptions.
+### Commands and descriptions
 
 | Command | Description |
-| :-----: | :------: |
+| :-----: | :---------: |
 | `p` | 打印 pattern space |
 | `1,2,3..` | 第 n 个匹配项 |
 | `w` | 写入 |
@@ -88,20 +88,20 @@ Commands and descriptions.
 | `r` | 读取文件 |
 | `n` | 打印 pattern space、改变执行流 |
 
-Commands about hold space and their descriptions.
+### Commands about hold space and their descriptions
 
 | Command | Description |
-| :-----: | :------: |
+| :-----: | :---------: |
 | `x` | 交换 pattern space 和 hold space |
 | `h` | 拷贝 pattern space 到 hold space |
 | `H` | 添加 pattern space 到 hold space |
 | `g` | 拷贝 hold space 到 pattern space |
 | `G` | 拷贝 hold space 到 pattern space |
 
-Multi-Line commands and loops.
+### Commands about Multi-Lineand and loops
 
 | Command | Description |
-| :-----: | :------: |
+| :-----: | :---------: |
 | `N` | 添加 next line 到 pattern space |
 | `P` | 打印 pattern space 直到换行（即遇到 \n）|
 | `D` | 删除 pattern space 直到换行（即遇到 \n）、对剩余部分重新执行 sed 命令 |
