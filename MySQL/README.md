@@ -38,6 +38,34 @@
 
 *MySQL* 在执行匹配时默认不区分大小写（即 `fuses` 会匹配到 `fuses` 和 `Fuses`），所以在区分大小写的项目中要格外注意这一点。
 
+``` sql
+/*
+    有这样一个表 products
+    +--------------+------------+
+    | prod_name    | prod_price |
+    +--------------+------------+
+    | Carrots      |       2.50 |
+    | Fuses        |       3.42 |
+    | JetPack 1000 |      35.00 |
+    | JetPack 2000 |      55.00 |
+    | Oil can      |       8.99 |
+    +--------------+------------+
+*/
+
+/* 执行操作 */
+SELECT prod_name, prod_price FROM products WHERE prod_name = 'fuses';
+
+/*
+    结果如下
+    +-----------+------------+
+    | prod_name | prod_price |
+    +-----------+------------+
+    | Fuses     |       3.42 |
+    +-----------+------------+
+    结果的 Fuses 与 fuses 不完全匹配，所以证明 MySQL 默认匹配是不区分大小写的
+*/
+```
+
 ---
 
 `NULL` 与 **不匹配**
@@ -57,26 +85,30 @@
 ``` sql
 /*
     有这样一个表 customers
-
-    | user | email |
-    | :--: | :---: |
-    | Tom | Tom@tom.com |
-    | Jerry | Jerry@jerry.com |
-    | Lucy | NULL |
+    +----------------+---------------------+
+    | cust_name      | cust_email          |
+    +----------------+---------------------+
+    | Coyote Inc.    | ylee@coyote.com     |
+    | Mouse House    | NULL                |
+    | Wascals        | rabbit@wascally.com |
+    | Yosemite Place | sam@yosemite.com    |
+    | E Fudd         | NULL                |
+    +----------------+---------------------+
 */
 
-/* 执行操作 /*
-SELECT user, email FROM customers WHERE email <> 'Lucy@lucy.com';
+/* 执行操作 */
+SELECT cust_name, cust_email FROM customers WHERE cust_email <> 'Lucy@lucy.com';
 
 /*
     结果如下
-
-    | user | email |
-    | :--: | :---: |
-    | Tom | Tom@tom.com |
-    | Jerry | Jerry@jerry.com |
-
-    结果中并没有带 Lucy 用户的行，说明 NULL 值并没有参与过滤
+    +----------------+---------------------+
+    | cust_name      | cust_email          |
+    +----------------+---------------------+
+    | Coyote Inc.    | ylee@coyote.com     |
+    | Wascals        | rabbit@wascally.com |
+    | Yosemite Place | sam@yosemite.com    |
+    +----------------+---------------------+
+    结果中并没有带 Mouse House 和 E Fudd 用户的行，说明 NULL 值并没有参与过滤
 */
 ```
 
@@ -107,6 +139,43 @@ SELECT user, email FROM customers WHERE email <> 'Lucy@lucy.com';
 
 在用于文本数据时，如果数据按相应的列排序，则 `MAX()` 返回最后一行。
 
+``` sql
+/*
+    有这样一个表 products
+    +----------------+------------+
+    | prod_name      | prod_price |
+    +----------------+------------+
+    | .5 ton anvil   |       5.99 |
+    | 1 ton anvil    |       9.99 |
+    | 2 ton anvil    |      14.99 |
+    | Detonator      |      13.00 |
+    | Bird seed      |      10.00 |
+    | Carrots        |       2.50 |
+    | Fuses          |       3.42 |
+    | JetPack 1000   |      35.00 |
+    | JetPack 2000   |      55.00 |
+    | Oil can        |       8.99 |
+    | Safe           |      50.00 |
+    | Sling          |       4.49 |
+    | TNT (1 stick)  |       2.50 |
+    | TNT (5 sticks) |      10.00 |
+    +----------------+------------+
+*/
+
+/* 执行操作 */
+SELECT MAX(prod_name) FROM products;
+
+/*
+    结果如下
+    +----------------+
+    | max(prod_name) |
+    +----------------+
+    | TNT (5 sticks) |
+    +----------------+
+    结果中使用 MAX() 对文本列进行汇总，其结果是排序的最后一行
+*/
+```
+
 ---
 
 对**非数值数据**使用 `MIN()`
@@ -114,3 +183,40 @@ SELECT user, email FROM customers WHERE email <> 'Lucy@lucy.com';
 *MySQL* 允许将 `MIN()` 用来返回任意列中的最小值，包括返回文本列中的最小值。
 
 在用于文本数据时，如果数据按相应的列排序，则 `MIN()` 返回最前面的行（即首行）。
+
+``` sql
+/*
+    有这样一个表 products
+    +----------------+------------+
+    | prod_name      | prod_price |
+    +----------------+------------+
+    | .5 ton anvil   |       5.99 |
+    | 1 ton anvil    |       9.99 |
+    | 2 ton anvil    |      14.99 |
+    | Detonator      |      13.00 |
+    | Bird seed      |      10.00 |
+    | Carrots        |       2.50 |
+    | Fuses          |       3.42 |
+    | JetPack 1000   |      35.00 |
+    | JetPack 2000   |      55.00 |
+    | Oil can        |       8.99 |
+    | Safe           |      50.00 |
+    | Sling          |       4.49 |
+    | TNT (1 stick)  |       2.50 |
+    | TNT (5 sticks) |      10.00 |
+    +----------------+------------+
+*/
+
+/* 执行操作 */
+SELECT MIN(prod_name) FROM products;
+
+/*
+    结果如下
+    +----------------+
+    | min(prod_name) |
+    +----------------+
+    | .5 ton anvil   |
+    +----------------+
+    结果中使用 MIN() 对文本列进行汇总，其结果是排序的第一行
+*/
+```
