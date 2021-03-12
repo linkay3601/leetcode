@@ -206,3 +206,4 @@ SELECT MIN(prod_name) FROM products;
     结果中使用 MIN() 对文本列进行汇总，其结果是排序的第一行
 */
 ```
+
