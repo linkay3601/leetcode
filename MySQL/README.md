@@ -207,3 +207,63 @@ SELECT MIN(prod_name) FROM products;
 */
 ```
 
+### 使用 `ROLLUP`
+
+*MySQL* 中将数据进行分组后，如果想在结果最后进行一波汇总的话，可以考虑 `WITH ROLLUP` 关键字。
+
+``` sql
+/*
+	有这样一个表 products
+    +---------+----------------+
+    | vend_id | prod_name      |
+    +---------+----------------+
+    |    1001 | .5 ton anvil   |
+    |    1001 | 1 ton anvil    |
+    |    1001 | 2 ton anvil    |
+    |    1003 | Detonator      |
+    |    1003 | Bird seed      |
+    |    1003 | Carrots        |
+    |    1002 | Fuses          |
+    |    1005 | JetPack 1000   |
+    |    1005 | JetPack 2000   |
+    |    1002 | Oil can        |
+    |    1003 | Safe           |
+    |    1003 | Sling          |
+    |    1003 | TNT (1 stick)  |
+    |    1003 | TNT (5 sticks) |
+    +---------+----------------+
+*/
+
+/* 执行操作 */
+SELECT vend_id, COUNT(*) AS num_prods FROM products GROUP BY vend_id;
+
+/*
+	结果如下
+    +---------+-----------+
+    | vend_id | num_prods |
+    +---------+-----------+
+    |    1001 |         3 |
+    |    1002 |         2 |
+    |    1003 |         7 |
+    |    1005 |         2 |
+    +---------+-----------+
+*/
+
+/* 执行操作 */
+SELECT vend_id, COUNT(*) AS num_prods FROM products GROUP BY vend_id WITH ROLLUP;
+
+/*
+	结果如下
+    +---------+-----------+
+    | vend_id | num_prods |
+    +---------+-----------+
+    |    1001 |         3 |
+    |    1002 |         2 |
+    |    1003 |         7 |
+    |    1005 |         2 |
+    |    NULL |        14 |
+    +---------+-----------+
+    可以看到，检索结果的最后一行有一个分组数据汇总
+*/
+```
+
