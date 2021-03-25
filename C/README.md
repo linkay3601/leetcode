@@ -24,4 +24,10 @@
 |  10  |                 [幂求值](./practice/power.c)                 |
 |  11  |    [获取最长的字符数组并打印](./practice/maxRowLength.c)     |
 |  12  | [获取最长的字符数组并打印（外部变量实现）](./practice/maxRowLengthExtern.c) |
+|  13  |           [计算字符数组长度](./practice/strlen.c)            |
+|  14  |          [字符数组转换为数值型](./practice/atoi.c)           |
+|  15  |           [大写字符转小写字符](./practice/lower.c)           |
+|  16  |              [随机数发生器](./practice/rand.c)               |
+|  17  |       [删除字符数组中的指定字符](./practice/squeeze.c)       |
+|  18  |             [字符数组连接](./practice/strcat.c)              |
 
