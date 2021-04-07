@@ -31,3 +31,5 @@
 |  17  |       [删除字符数组中的指定字符](./practice/squeeze.c)       |
 |  18  |             [字符数组连接](./practice/strcat.c)              |
 |  19  |   [求指定位范围的值（位运算符实现）](./practice/getbits.c)   |
+|  20  |          [折半查找指定元素](./practice/binsearch.c)          |
+|  21  | [字符计数（Switch 语句实现）](./practice/charCounterSwitch.c) |
