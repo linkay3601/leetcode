@@ -33,4 +33,6 @@
 |  19  |   [求指定位范围的值（位运算符实现）](./practice/getbits.c)   |
 |  20  |          [折半查找指定元素](./practice/binsearch.c)          |
 |  21  | [字符计数（`Switch` 语句实现）](./practice/charCounterSwitch.c) |
+|  22  |    [字符数组转换数值型（简化版）](./practice/atoiPlus.c)     |
+|  23  |      [希尔排序（高阶插入排序）](./practice/shellSort.c)      |
 
