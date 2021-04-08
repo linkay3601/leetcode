@@ -36,4 +36,10 @@
 |  22  |    [字符数组转换数值型（简化版）](./practice/atoiPlus.c)     |
 |  23  |      [希尔排序（高阶插入排序）](./practice/shellSort.c)      |
 |  24  |              [字符串反转](./practice/reverse.c)              |
+|  25  |              [数字转字符串](./practice/itoa.c)               |
+|  26  |         [清除字符串末尾的空白符](./practice/trim.c)          |
+|  27  |        [简单 `grep` 命令实现](./practice/strindex.c)         |
+|  28  |            [字符串转浮点型数](./practice/atof.c)             |
+|  29  |              [简易计算簿](./practice/sumAtof.c)              |
+|  30  |      [字符串转整型数（简化版）](./practice/atoiMinus.c)      |
 
