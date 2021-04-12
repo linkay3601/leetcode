@@ -42,4 +42,6 @@
 |  28  |            [字符串转浮点型数](./practice/atof.c)             |
 |  29  |              [简易计算簿](./practice/sumAtof.c)              |
 |  30  |      [字符串转整型数（简化版）](./practice/atoiMinus.c)      |
+|  31  |        [逆波兰简易计算器](./practice/reverseBolan.c)         |
+|  32  |       [数字转字符串（递归实现）](./practice/itoaRe.c)        |
 
