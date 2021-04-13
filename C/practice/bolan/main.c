@@ -6,7 +6,7 @@
 
 
 int main()
-/* 逆波兰简易计算器 */
+/* 逆波兰简易计算器（解耦版本）*/
 {
     int type;
     double op2;

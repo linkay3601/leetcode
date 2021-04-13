@@ -44,4 +44,7 @@
 |  30  |      [字符串转整型数（简化版）](./practice/atoiMinus.c)      |
 |  31  |        [逆波兰简易计算器](./practice/reverseBolan.c)         |
 |  32  |       [数字转字符串（递归实现）](./practice/itoaRe.c)        |
+|  33  |       [逆波兰简易计算器（解耦版）](./practice/bolan/)        |
+|  34  |        [快速排序（高阶冒泡排序）](./practice/qsort.c)        |
+|  35  | [从标准输入获取数字值并给指定目标赋值](./practice/getint.c)  |
 
