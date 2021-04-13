@@ -47,4 +47,5 @@
 |  33  |       [逆波兰简易计算器（解耦版）](./practice/bolan/)        |
 |  34  |        [快速排序（高阶冒泡排序）](./practice/qsort.c)        |
 |  35  | [从标准输入获取数字值并给指定目标赋值](./practice/getint.c)  |
+|  36  |   [计算字符数组长度（指针版）](./practice/strlenPointer.c)   |
 
