@@ -50,4 +50,10 @@
 |  36  |   [计算字符数组长度（指针版）](./practice/strlenPointer.c)   |
 |  37  | [计算字符数组长度（指针进阶版）](./practice/strlenPointerPlus.c) |
 |  38  |      [分配空间与释放空间（简易版）](./practice/alloc.c)      |
+|  39  |        [字符串复制（数组实现）](./practice/strcpy.c)         |
+|  40  |      [字符串复制（指针版）](./practice/strcpyPointer.c)      |
+|  41  |  [字符串复制（指针进阶版）](./practice/strcpyPointerPlus.c)  |
+|  42  | [字符串复制（指针高阶版）](./practice/strcpyPointerAdvanced.c) |
+|  43  |        [字符串比较（数组实现）](./practice/strcmp.c)         |
+|  44  |      [字符串比较（指针版）](./practice/strcmpPointer.c)      |
 
