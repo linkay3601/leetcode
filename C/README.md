@@ -48,4 +48,6 @@
 |  34  |        [快速排序（高阶冒泡排序）](./practice/qsort.c)        |
 |  35  | [从标准输入获取数字值并给指定目标赋值](./practice/getint.c)  |
 |  36  |   [计算字符数组长度（指针版）](./practice/strlenPointer.c)   |
+|  37  | [计算字符数组长度（指针进阶版）](./practice/strlenPointerPlus.c) |
+|  38  |      [分配空间与释放空间（简易版）](./practice/alloc.c)      |
 
