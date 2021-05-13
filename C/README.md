@@ -56,4 +56,5 @@
 |  42  | [字符串复制（指针高阶版）](./practice/strcpyPointerAdvanced.c) |
 |  43  |        [字符串比较（数组实现）](./practice/strcmp.c)         |
 |  44  |      [字符串比较（指针版）](./practice/strcmpPointer.c)      |
+|  45  | [简化版 `sort` 命令（指针数组实现）](./practice/sortPointerArray.c) |
 
