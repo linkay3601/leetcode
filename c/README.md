@@ -6,20 +6,26 @@
 
 -   《*C* 程序设计语言（第二版）》
 
+## 目录
+
+   * [C](#c)
+      * [目录](#目录)
+      * [Practice](#practice)
+
 ## Practice
 
 一些小练习，主要是书中的一些示例代码。测试通过后在这里做一个索引，方便日后查阅。
 
-|  #   |                            Title                             |
+|  #   |                        Title（标题）                         |
 | :--: | :----------------------------------------------------------: |
 |  1   |               [你好，世界](./practice/hello.c)               |
 |  2   |  [华氏温度与摄氏温度对照表](./practice/temperatureTransf.c)  |
-|  3   | [华氏温度与摄氏温度对照表（`For` 循环实现）](./practice/temperatrueTransfFor.c) |
+|  3   | [华氏温度与摄氏温度对照表（for 循环实现）](./practice/temperatrueTransfFor.c) |
 |  4   |             [拷贝输入流](./practice/copyFile.c)              |
 |  5   |             [字符计数](./practice/charCounter.c)             |
-|  6   |  [字符计数（`For` 循环实现）](./practice/charCounterFor.c)   |
+|  6   |   [字符计数（for 循环实现）](./practice/charCounterFor.c)    |
 |  7   |              [行计数](./practice/rowCounter.c)               |
-|  8   |          [Unix 命令 `wc` 骨干代码](./practice/wc.c)          |
+|  8   |           [Unix 命令 wc 骨干代码](./practice/wc.c)           |
 |  9   |          [数组计数](./practice/arrayDigitCounter.c)          |
 |  10  |                 [幂求值](./practice/power.c)                 |
 |  11  |    [获取最长的字符数组并打印](./practice/maxRowLength.c)     |
@@ -32,13 +38,13 @@
 |  18  |             [字符数组连接](./practice/strcat.c)              |
 |  19  |   [求指定位范围的值（位运算符实现）](./practice/getbits.c)   |
 |  20  |          [折半查找指定元素](./practice/binsearch.c)          |
-|  21  | [字符计数（`Switch` 语句实现）](./practice/charCounterSwitch.c) |
+|  21  | [字符计数（switch 语句实现）](./practice/charCounterSwitch.c) |
 |  22  |    [字符数组转换数值型（简化版）](./practice/atoiPlus.c)     |
 |  23  |      [希尔排序（高阶插入排序）](./practice/shellSort.c)      |
 |  24  |              [字符串反转](./practice/reverse.c)              |
 |  25  |              [数字转字符串](./practice/itoa.c)               |
 |  26  |         [清除字符串末尾的空白符](./practice/trim.c)          |
-|  27  |        [简单 `grep` 命令实现](./practice/strindex.c)         |
+|  27  |         [简单 grep 命令实现](./practice/strindex.c)          |
 |  28  |            [字符串转浮点型数](./practice/atof.c)             |
 |  29  |              [简易计算簿](./practice/sumAtof.c)              |
 |  30  |      [字符串转整型数（简化版）](./practice/atoiMinus.c)      |
@@ -56,5 +62,5 @@
 |  42  | [字符串复制（指针高阶版）](./practice/strcpyPointerAdvanced.c) |
 |  43  |        [字符串比较（数组实现）](./practice/strcmp.c)         |
 |  44  |      [字符串比较（指针版）](./practice/strcmpPointer.c)      |
-|  45  | [简化版 `sort` 命令（指针数组实现）](./practice/sortPointerArray.c) |
+|  45  | [简化版 sort 命令（指针数组实现）](./practice/sortPointerArray.c) |
 
