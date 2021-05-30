@@ -63,4 +63,9 @@
 |  43  |        [字符串比较（数组实现）](./practice/strcmp.c)         |
 |  44  |      [字符串比较（指针版）](./practice/strcmpPointer.c)      |
 |  45  | [简化版 sort 命令（指针数组实现）](./practice/sortPointerArray.c) |
+|  46  |           [简易 echo 命令实现](./practice/echo.c)            |
+|  47  |   [日期转换一年中的第几天](./practice/monthDayTranslate.c)   |
+|  48  | [简易 grep 命令实现（支持命令行参数）](./practice/strindexArg.c) |
+|  49  | [简易 grep 命令实现（支持命令行选项）](./practice/strindexOption.c) |
+|  50  | [升级版 sort 命令（函数指针实现）](./practice/qsortFuncPointer.c) |
 
