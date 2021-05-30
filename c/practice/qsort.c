@@ -26,12 +26,12 @@ void qsort(int v[], int left, int right)
 
     if (left >= right)
         return;
-    swap(v, left, (left + right) / 2);  // 这一步有点迷（去掉也不会报错，猜测是尽可能的减少交换次数）
+    swap(v, left, (left + right) / 2);  // 将基准值放到最左边，方便进行比较
     last = left;
     for (i = left + 1; i <= right; i++)
         if (v[i] < v[left])
             swap(v, ++last, i);
-    swap(v, left, last);
+    swap(v, left, last);  // 将基准值与最右边小于它的值调换位置
     qsort(v, left, last - 1);
     qsort(v, last + 1, right);
 }

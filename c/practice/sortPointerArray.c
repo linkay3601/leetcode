@@ -1,57 +1,51 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAXLINES 5000  // 存储的最大行数
+#define MAXLINES 5000  // 最大可排序的行数
 
-char *lineptr[MAXLINES];  // 指向问本行的指针数组
+char *lineptr[MAXLINES];  // 文本行的指针数组
 
 int readlines(char *lineptr[], int nlines);
 void writelines(char *lineptr[], int nlines);
-void qsort(char *lineptr[], int left, int right);
+
+void qsort(char *lineptr[], int left, int right);  // 快速排序
 
 int main()
-/* 简化版 sort 命令（指针数组实现） */
 {
-    int nlines;  // 读取到的输入行数量
+    int nlines;
 
-    if ((nlines = readlines(lineptr, MAXLINES)) >= 0)
-    {
+    if ((nlines = readlines(lineptr, MAXLINES)) >= 0) {
         qsort(lineptr, 0, nlines - 1);
         writelines(lineptr, nlines);
         return 0;
-    } else
-    {
+    } else {
         printf("error: input too big to sort\n");
         return 1;
     }
 }
 
-
 /* -------------------------------------------------------------------------- */
-#define MAXLINE 1000  // 输入行的最大长度
 
+#define MAXLEN 1000  // 输入行的最大长度
 int getLine(char *, int);
 char *alloc(int);
 
 int readlines(char *lineptr[], int maxlines)
-/* 读取每一行 */
 {
     int len, nlines;
-    char *p, line[MAXLINE];
+    char *p, line[MAXLEN];
 
     nlines = 0;
-    while ((len = getLine(line, MAXLINE)) > 0)
+    while ((len = getLine(line, MAXLEN)) > 0)
         if (nlines >= maxlines || (p = alloc(len)) == NULL)
             return -1;
         else {
-            line[len - 1] = '\0';  // 删除换行符
+            line[len - 1] = '\0';
             strcpy(p, line);
             lineptr[nlines++] = p;
         }
-
-    return  nlines;
+    return nlines;
 }
-
 
 int getLine(char s[], int lim)
 {
@@ -71,40 +65,68 @@ int getLine(char s[], int lim)
     return i;
 }
 
+#define ALLOCSIZE 10000  // 可用的空间
 
+static char allocbuf[ALLOCSIZE];
+static char *allocp = allocbuf;
+
+char *alloc(int n)
+/* 分配空间 */
+{
+    if (allocbuf + ALLOCSIZE - allocp >= n)
+    {
+        allocp += n;
+        return allocp - n;
+    } else
+    {
+        return 0;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+
+/**
+ * * 写法一
+ * // void writelines(char *lineptr[], int nlines)
+ * // {
+ * //     int i;
+ * // 
+ * //     for (i = 0; i < nlines; i++)
+ * //         printf("%s\n", lineptr[i]);
+ * // }
+ */
+
+/* 写法二 */
 void writelines(char *lineptr[], int nlines)
-/* 打印每一行 */
 {
     while (nlines-- > 0)
         printf("%s\n", *lineptr++);
 }
 
-
 /* -------------------------------------------------------------------------- */
-void swap(char *v[], int i, int j);
 
 void qsort(char *v[], int left, int right)
 {
     int i, last;
+    void swap(char *v[], int i, int j);
 
     if (left >= right)
         return;
-    swap(v, left, right);
+    swap(v, left, (left + right) / 1);  // 将基准值放到最左边，方便进行比较
     last = left;
     for (i = left + 1; i <= right; i++)
-        if (strcmp(v[i], v[left]) < 0)
+        if (strcmp(v[i], v[left]) < 0)  // 比较两个字符串中的字符
             swap(v, ++last, i);
-    swap(v, left, right);
+    swap(v, left, last);  // 将基准值与最右边小于它的值调换位置
     qsort(v, left, last - 1);
     qsort(v, last + 1, right);
 }
-
 
 void swap(char *v[], int i, int j)
 {
     char *temp;
 
     temp = v[i];
-    v[j] = v[i];
+    v[i] = v[j];
     v[j] = temp;
 }
