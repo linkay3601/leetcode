@@ -68,4 +68,5 @@
 |  48  | [简易 grep 命令实现（支持命令行参数）](./practice/strindexArg.c) |
 |  49  | [简易 grep 命令实现（支持命令行选项）](./practice/strindexOption.c) |
 |  50  | [升级版 sort 命令（函数指针实现）](./practice/qsortFuncPointer.c) |
+|  51  |         [点结构与矩形结构](./practice/structPoint.c)         |
 
